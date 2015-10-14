@@ -6,13 +6,23 @@
   transform: translateY(-50%);
 }
 
-body, html {
+html, body {
 	width: 100%;
 	height: 100%;
+	min-height: 100%;
 	margin: 0 0 0 0;
 }
 
+#bg{
+	background: url("../images/IMG_2078.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 .pageWrapper {
+	background: transparent;
 	height: 100%;
 	width: 100%;
 }
@@ -31,6 +41,7 @@ body, html {
 }
 
 #mdpBrand, #brandTag{
+	color: #fff;
 	text-align: center;
 }
 
@@ -44,12 +55,71 @@ body, html {
 	list-style-type: none;
 	padding: 0 0 0 0;
 	li {
-		width: 25%;
+		width: 15%;
 		text-align: center;
 		display: inline-block;
 		a {
-			padding: 1em 2em 1em 2em;
-			background-color: grey;
+			color: #e84b82;
+		    display: inline-block;
+		    text-decoration: none;
+		    overflow: hidden;
+		    vertical-align: top;
+		    -webkit-perspective: 600px;
+		    -moz-perspective: 600px;
+		    -ms-perspective: 600px;
+		    perspective: 600px;
+		    -webkit-perspective-origin: 50% 50%;
+		    -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		    perspective-origin: 50% 50%;
+		    &:hover span {
+				background: $color;
+				-webkit-transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+				-moz-transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+				-ms-transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+				transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+		    }
+
+		    span {
+		    	font-size: 2em;
+				display: block;
+				position: relative;
+				padding: 0 6px;
+				-webkit-transition: all 0.5s ease;
+				-moz-transition: all 0.5s ease;
+				-ms-transition: all 0.5s ease;
+				transition: all 0.5s ease;
+				-webkit-transform-origin: 50% 0%;
+				-moz-transform-origin: 50% 0%;
+				-ms-transform-origin: 50% 0%;
+				transform-origin: 50% 0%;
+				-webkit-transform-style: preserve-3d;
+				-moz-transform-style: preserve-3d;
+				-ms-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+				&:after {
+			        content: attr(data-title);
+			        display: block;
+			        position: absolute;
+			        left: 0;
+			        top: 0;
+			        padding: 0 3px;
+			        color: #fff;
+			        background: #e84b82;
+			        -webkit-transform-origin: 50% 0%;
+			        -moz-transform-origin: 50% 0%;
+			        -ms-transform-origin: 50% 0%;
+			        transform-origin: 50% 0%;
+			        -webkit-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+			        -moz-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+			        -ms-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+			        transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+			    }
+		    }
 		}
 	}
 }
+
+
+
+
